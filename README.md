@@ -1,2 +1,2 @@
-# TelegramGitHub
+# Telegram-GitHub
 To be implemented
