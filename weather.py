@@ -1,8 +1,8 @@
 import requests
 
-
 # Set the API endpoint URL
 url = "https://weatherapi-com.p.rapidapi.com/current.json"
+
 
 def get_weather(city) -> str:
     """
@@ -31,15 +31,15 @@ def get_weather(city) -> str:
     data = response.json()
 
     # Format the weather information
-    result = f"Текущая погода в городе {data['location']['name']}, {data['location']['country']}\n" \
-             f"Температура воздуха : {data['current']['temp_c']} C\n" \
-             f"Влажность воздуха : {data['current']['humidity']}\n" \
-             f"Ощущается как : {data['current']['feelslike_c']}\n" \
-             f"Облачность : {data['current']['cloud']}\n" \
-             f"UV индекс : {data['current']['uv']}"
+    result = (f"Текущая погода в городе {data['location']['name']} \n"
+              f", {data['location']['country']} \n" \
+              f"Температура воздуха : {data['current']['temp_c']} C\n" \
+              f"Влажность воздуха : {data['current']['humidity']}\n" \
+              f"Ощущается как : {data['current']['feelslike_c']}\n" \
+              f"Облачность : {data['current']['cloud']}\n" \
+              f"UV индекс : {data['current']['uv']}")
 
     return result
-
 
 # response = b'{"location":{"name":"Riga","region":"Riga","country":"Latvia","lat":56.95,"lon":24.1,' \
 #          b'"tz_id":"Europe/Riga",' \
